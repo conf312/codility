@@ -1,0 +1,97 @@
+A small frog wants to get to the other side of a river.
+The frog is initially located on one bank of the river (position 0)
+and wants to get to the opposite bank (position X+1).
+Leaves fall from a tree onto the surface of the river.
+
+You are given an array A consisting of N integers representing the falling leaves. A[K] represents the position where one leaf falls at time K, measured in seconds.
+
+The goal is to find the earliest time when the frog can jump to the other side of the river.
+The frog can cross only when leaves appear at every position across the river from 1 to X (that is, we want to find the earliest moment when all the positions from 1 to X are covered by leaves).
+You may assume that the speed of the current in the river is negligibly small, i.e. the leaves do not change their positions once they fall in the river.
+
+For example, you are given integer X = 5 and array A such that:
+
+  A[0] = 1
+  A[1] = 3
+  A[2] = 1
+  A[3] = 4
+  A[4] = 2
+  A[5] = 3
+  A[6] = 5
+  A[7] = 4
+In second 6, a leaf falls into position 5. This is the earliest time when leaves appear in every position across the river.
+
+Write a function:
+
+class Solution { public int solution(int X, int[] A); }
+
+that, given a non-empty array A consisting of N integers and integer X, returns the earliest time when the frog can jump to the other side of the river.
+
+If the frog is never able to jump to the other side of the river, the function should return −1.
+
+For example, given X = 5 and array A such that:
+
+  A[0] = 1
+  A[1] = 3
+  A[2] = 1
+  A[3] = 4
+  A[4] = 2
+  A[5] = 3
+  A[6] = 5
+  A[7] = 4
+the function should return 6, as explained above.
+
+Write an efficient algorithm for the following assumptions:
+
+N and X are integers within the range [1..100,000];
+each element of array A is an integer within the range [1..X].
+
+==================================================================
+
+작은 개구리는 강의 반대편으로 가고 싶어합니다.
+개구리는 처음에 강의 한 둑(위치 0)에 있으며 반대쪽 둑(위치 X+1)으로 이동하려고 합니다.
+나뭇잎이 나무에서 강물 위로 떨어집니다.
+
+떨어지는 잎을 나타내는 N개의 정수로 구성된 배열 A가 제공됩니다.
+A[K]는 초 단위로 측정한 시간 K에 한 잎이 떨어지는 위치를 나타냅니다.
+
+목표는 개구리가 강 반대편으로 점프할 수 있는 가장 빠른 시간을 찾는 것입니다.
+개구리는 1에서 X까지의 모든 위치에서 나뭇잎이 나타날 때만 건널 수 있습니다(즉, 우리는 1에서 X까지의 모든 위치가 나뭇잎에 가려지는 가장 빠른 순간을 찾고자 합니다).
+강물 흐름의 속도가 무시해도 될 정도로 작다고 가정할 수 있습니다. 즉, 나뭇잎이 강물에 떨어지면 위치가 바뀌지 않습니다.
+
+예를 들어 정수 X = 5와 배열 A가 주어지면 다음과 같습니다.
+
+  A[0] = 1
+  A[1] = 3
+  A[2] = 1
+  A[3] = 4
+  A[4] = 2
+  A[5] = 3
+  A[6] = 5
+  A[7] = 4
+두 번째 6에서는 나뭇잎이 위치 5로 떨어집니다. 이때가 강 건너 모든 위치에서 나뭇잎이 나타나는 가장 이른 시기다.
+
+함수 쓰기:
+
+클래스 솔루션 { public int 솔루션(int X, int[] A), }
+
+즉, N개의 정수와 정수 X로 구성된 비어 있지 않은 배열 A가 주어지면 개구리가 강의 반대편으로 점프할 수 있는 가장 이른 시간을 반환한다.
+
+만약 개구리가 절대로 강 반대편으로 점프할 수 없다면, 기능은 -1로 돌아와야 합니다.
+
+예를 들어 X = 5와 배열 A가 주어지면 다음과 같다.
+
+  A[0] = 1
+  A[1] = 3
+  A[2] = 1
+  A[3] = 4
+  A[4] = 2
+  A[5] = 3
+  A[6] = 5
+  A[7] = 4
+함수는 위에서 설명한 대로 6을 반환해야 합니다.
+
+다음 가정을 위한 효율적인 알고리즘을 작성하십시오.
+
+N과 X는 [1] 범위의 정수입니다.100,000];
+배열 A의 각 요소는 [1] 범위 내의 정수입니다.X]…하다
